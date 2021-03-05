@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import {DataContext} from '../Context'
+import '../css/Products.css'
 
 export class Products extends Component {
 
@@ -20,6 +21,9 @@ export class Products extends Component {
                                     <h3>
                                         <Link to={`/products/${products._id}`}>{products.title}</Link>
                                     </h3>
+                                    <span>${products.price}</span>
+                                    <p>{products.description}</p>
+                                    <button>Add to Cart</button>
                                 </div>
                          </div>
                    ))
